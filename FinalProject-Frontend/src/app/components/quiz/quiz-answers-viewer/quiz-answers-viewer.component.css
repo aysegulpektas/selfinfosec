@@ -1,0 +1,45 @@
+.question {
+    cursor: pointer;
+}
+.questionText {
+    background-color: rgb(254, 253, 253);
+    border: 3px solid rgb(0, 0, 0);
+    margin: 20px;
+    padding:20px;
+    border-radius: 15px;
+    min-height: 200px;
+}
+.answer {
+    border:3px solid rgb(0, 157, 105);
+    background-color: rgb(255, 255, 255);
+    margin:20px;
+    border-radius: 15px;
+    padding:15px;
+
+}
+.answer:hover {
+
+
+}
+.selectedAnswer {
+    background-color: rgb(0, 166, 36);
+    border:3px solid rgb(108, 255, 206);
+}
+.answerItem {
+
+}
+.answerText {
+
+}
+.buttonWrapper {
+    text-align: right;
+    margin: 20px;
+}
+.displayNone {
+    display: none;
+}
+.quizEndSection {
+    color:var(--default-text-color);
+    text-align: center;
+    padding:30px;
+}

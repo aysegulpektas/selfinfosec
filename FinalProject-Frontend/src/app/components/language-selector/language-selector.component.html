@@ -1,0 +1,7 @@
+<div class="language-selector-container">
+    <div class="languageList">
+        <div class="language-item" (click)="selectLanguage('tr')"><img src="/assets/flags/tr.svg" class="lang-flag"/><font class="lang-text">{{'tr' | translate}} </font><i [class.displayNone]="selectedLang != 'tr'" class="bi bi-globe language-selected"></i></div>
+        <div class="language-item" (click)="selectLanguage('en')"><img src="/assets/flags/gb.svg" class="lang-flag"/><font class="lang-text">{{'en' | translate}} </font><i [class.displayNone]="selectedLang != 'en'" class="bi bi-globe language-selected"></i></div>
+    </div>
+
+</div>

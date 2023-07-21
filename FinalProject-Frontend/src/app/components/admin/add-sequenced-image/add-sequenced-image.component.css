@@ -1,0 +1,9 @@
+.addSequencedImageMain {
+    max-width: 600px;
+    width: 100%;
+    background-color: #fefefe;
+    margin: auto;
+    padding:20px;
+    border-radius: 10px;
+    border:1px solid black;
+}

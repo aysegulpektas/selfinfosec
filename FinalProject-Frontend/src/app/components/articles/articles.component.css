@@ -1,0 +1,144 @@
+.articlesMain {
+  background-color: var(--default-page-background);
+  border-radius: 20px;
+  min-height: 90vh;
+  width: 96%;
+  margin: auto;
+  padding: 30px;
+  margin-bottom: 30px;
+  overflow: auto;
+}
+.adminOperationsClass {
+  background-color: var(--default-page-background);
+  border-radius: 20px;
+  width: 96%;
+  margin: auto;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+.adminOperationsClass::before {
+
+}
+.adminOperationsClass button {
+  margin:10px;
+}
+
+button{
+  background-color: #3b4e5b;
+}
+#search-button {
+  background-color: #3b4e5b;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 500;
+  color: #fefefe;
+}
+
+#seach-button:hover {
+  background: #fefefe;
+  color: #162938;
+}
+
+.filterHrTag {
+  color: var(--default-text-color);
+}
+
+.list {
+  list-style: none;
+  padding:0px;
+}
+.listItem {
+ /* background-image: linear-gradient(to right bottom, #c4c4c4, #b8b8b8, #adadad, #a1a1a1, #969696);*/
+  padding:10px;
+  margin-bottom: 10px;
+  font-family: sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: #162938;
+  background-color: #fefefe;
+}
+
+.listItem:last-child{
+  margin-bottom: 0px;
+}
+.listItem:hover {
+  background-color: rgb(190, 190, 190);
+  cursor: pointer;
+}
+.activeItem {
+  background-color: rgb(0, 176, 0);
+}
+.articleListMain {
+  margin: 20px 0px;
+}
+.articleList {
+  margin: 10px 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around
+}
+.spinnerExtras {
+  color: var(--default-text-color);
+  position: relative;
+  top: 5px;
+  left: 5px;
+}
+i{
+  display: none;
+  color: #fefefe;
+}
+#icon{
+  display: none;
+}
+#burger{display: none;}
+
+@media screen and (max-width: 800px){
+
+  i{
+    display: block;
+    background-color: #3b4e5b;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    color: #fefefe;
+    
+  }
+  #icon{
+    display: block;
+    background-color: #3b4e5b;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #fefefe;
+  }
+  #burger{
+    display: block;
+    background-color: #3b4e5b;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.5em;
+    font-weight: 500;
+    color: #fefefe;
+  }
+  #search-button{
+    display: none;
+    
+  }
+  #categories{
+    display: none;
+  }
+ 
+  
+}

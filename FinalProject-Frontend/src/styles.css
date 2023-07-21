@@ -1,0 +1,57 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* You can add global styles to this file, and also import other style files */
+
+body {
+    min-height: 100vh;
+    background: #dfdfe1;
+    background: -moz-linear-gradient(135deg, rgb(255, 255, 255) 0%, #fafafb 33%, #f9f9fa 66%, #f8f8f9 100%);
+    background: -webkit-linear-gradient(135deg, #f6f6f7 0%, #f4f4f5 33%, #f1f1f3 66%, #eeeef0 100%);
+    background: linear-gradient(135deg, #eaeaec 0%, #e5e5e7 33%, #dfdfe1 66%, #b2b2b4 100%);
+    background-attachment: fixed;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e8e8e8",endColorstr="#b2b2b4",GradientType=1);
+    --body-background:linear-gradient(135deg, #eaeaec 0%, #e5e5e7 33%, #dfdfe1 66%, #b2b2b4 100%);
+    --navbar-background-color:#fefefe;
+    --default-text-color:#000;
+    --secondary-text-color:rgb(103, 103, 103);
+    --default-page-background:#fefefe;
+    --default-secondary-color:#d5d5d5;
+    --default-secondary-hover-color:#c5c5c5;
+    --list-card-color:linear-gradient(-45deg, #d4dae8 0%, #fefefe 100% );
+    --card-text-color:#0c1421;
+    --card-secondary:#818181;
+
+
+}
+.dark {
+    background: rgb(0,0,0);
+    background: -moz-linear-gradient(135deg, rgba(0,0,0,1) 0%, rgba(19,19,53,1) 33%, rgba(72,28,28,1) 66%, rgba(19,55,64,1) 100%);
+    background: -webkit-linear-gradient(135deg, rgba(0,0,0,1) 0%, rgba(19,19,53,1) 33%, rgba(72,28,28,1) 66%, rgba(19,55,64,1) 100%);
+    background: linear-gradient(135deg, rgba(0,0,0,1) 0%, rgba(19,19,53,1) 33%, rgba(72,28,28,1) 66%, rgba(19,55,64,1) 100%);
+    background-attachment: fixed;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#133740",GradientType=1);
+    --navbar-background-color:#383838;
+    --default-text-color:rgb(237, 237, 237);
+    --secondary-text-color:rgb(197, 197, 197);
+    --default-page-background:#383838;
+    --body-background:linear-gradient(135deg, rgba(0,0,0,1) 0%, rgba(19,19,53,1) 33%, rgba(72,28,28,1) 66%, rgba(19,55,64,1) 100%);
+    --default-secondary-color:#555555;
+    --default-secondary-hover-color:#616161;
+    --list-card-color:linear-gradient(-45deg, #6b6b6b 0%, #645c5c 100% );
+    --card-text-color:#f3f3f3;
+    --card-secondary:#fefefe;
+}

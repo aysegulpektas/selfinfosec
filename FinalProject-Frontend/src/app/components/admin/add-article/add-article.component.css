@@ -1,0 +1,17 @@
+.addArticleContainer {
+    text-align: center;
+}
+.wrapper {
+    text-align: left;
+    display: inline-block;
+    max-width: 650px;
+    width: 100%;
+    padding: 30px;
+    background-color: white;
+}
+.form-group {
+    margin-bottom: 10px;
+}
+#articleContent {
+    min-height: 200px;
+}

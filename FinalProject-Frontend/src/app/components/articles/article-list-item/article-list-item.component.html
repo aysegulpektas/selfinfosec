@@ -1,0 +1,30 @@
+<!-- <div class="articleMain" (click)="goToArticle(article)">
+    <div class="title">
+        {{article.articleTitle}}
+    </div>
+    <div class="description">
+        {{article.articleDescription}}
+    </div>
+    <div class="footer">
+        <div class="addedDate">
+            {{article.addedDate | date : 'dd/MM/yyyy'}}
+        </div>
+    </div>
+</div> -->
+
+
+<div class="card">
+    <p class="subcategoryName"><i class="bi bi-tag-fill"></i>{{currentCategory.subcategoryName | categoryName}}</p>
+
+    <div class="content">
+
+        <p class="heading">{{article.articleTitle}}
+        </p>
+        <p class="para">
+            {{article.articleDescription}}
+        </p>
+        <button (click)="goToArticle(article)" class="btn">{{'learnMore' | translate}}</button>
+
+    </div>
+
+</div>

@@ -1,0 +1,4 @@
+<select (change)="changeSelectedArticle($event)" class="form-select" aria-label="Default select example">
+    <option disabled selected value="-1">Makale Seçin</option>
+    <option *ngFor="let article of articles" value="{{article.articleId}}">{{article.articleTitle}}</option>
+  </select>

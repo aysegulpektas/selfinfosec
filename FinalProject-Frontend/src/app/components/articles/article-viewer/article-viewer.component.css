@@ -1,0 +1,90 @@
+.adminOperations {
+    background-color: var(--navbar-background-color);
+    border-radius: 30px;
+    padding: 15px;
+    margin: auto;
+    width: 98%;
+    margin-bottom: 20px;
+}
+
+.iframe-wrapper {
+    padding: 5px;
+    border-radius: 30px;
+    background-color: var(--navbar-background-color);
+    margin: auto;
+    width: 98%;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.iframe-wrapper iframe {
+    width: 100%;
+}
+
+.sequenced-image-wrapper {
+
+    padding: 30px;
+    border-radius: 30px;
+    background-color: var(--navbar-background-color);
+    margin: auto;
+    width: 98%;
+    position: relative;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.sequenced-image-description-container {
+    position: relative;
+    display: inline-block;
+}
+
+.sequenced-image-description-container img {
+    max-width: 700px;
+    width: 100%;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.sequenced-image-description-container .sequenced-image-description {
+    background: rgb(184, 184, 184);
+    opacity: 0.7;
+    position: absolute;
+    bottom: 0px;
+    border-radius: 0px 0px 30px 30px;
+    font-size: 16px;
+    padding: 10px;
+    max-width: 700px;
+    width: 100%;
+}
+
+.hideImg {
+    display: none;
+}
+
+.sequenced-image-title {
+    color: var(--default-text-color);
+}
+
+.questionGroupItem {
+    background-color: rgb(94, 94, 94);
+    font-size: 18px;
+    border-radius: 15px;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px;
+}
+
+.question-groups-wrapper {
+    background-color: var(--navbar-background-color);
+    margin: auto;
+    width: 98%;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+.requireLoggedForShowQuizzes {
+    color: var(--default-text-color);
+    font-size: 16px;
+    font-weight: bold;
+}

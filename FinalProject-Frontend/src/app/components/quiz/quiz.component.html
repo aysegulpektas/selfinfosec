@@ -1,0 +1,28 @@
+<div class="question" *ngIf="questionList != null && questionList.length > 0 && quizEnd == false">
+    <div class="questionText">
+        <font><b>Soru {{currentQuestion+1}}</b></font>
+        <hr>
+        <font>{{questionList[currentQuestion].questionText}}</font>
+    </div>
+
+    <div *ngFor="let answer of questionList[currentQuestion].answers" class="answer" [class.selectedAnswer]="selectedAnswer == answer.answerId"  (click)="selectAnswer(answer.answerId)">
+        <div class="answerItem">
+            <font class="answerText">{{answer.answerText}}</font>
+        </div>
+    </div>
+</div>
+<div class="buttonWrapper" [class.displayName]="quizEnd == false">
+    <button *ngIf="questionList != null && questionList.length > currentQuestion+1" class="btn btn-success" (click)="nextQuestion()">
+        <font >Sonraki Soru</font>
+    </button>
+    <button *ngIf="questionList != null && questionList.length == currentQuestion+1" class="btn btn-success" (click)="endQuiz()">
+        <font >Sınavı bitir</font>
+    </button>
+
+</div>
+<div *ngIf="quizEnd == true" class="quizEndSection">
+    <i style="font-size:70px; color:rgb(0, 185, 0) "class="bi bi-check-circle"></i>
+    <h2>Sınavınız bitmiştir. </h2>
+    <button class="btn btn-success" (click)="showAnswers()">Cevapları Gör</button>
+</div>
+

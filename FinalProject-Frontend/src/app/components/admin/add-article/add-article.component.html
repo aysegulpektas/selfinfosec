@@ -1,0 +1,35 @@
+<div class="addArticleContainer">
+    <div class="wrapper">
+        <h5>Yeni Makale Ekle</h5>
+        <form [formGroup]="addArticleForm">
+            <div class="form-group">
+                <label for="articleTitle">Makale Başlığı</label>
+                <input formControlName="articleTitle" type="text" class="form-control" id="articleTitle">
+            </div>
+            <div class="form-group">
+                <label for="articleDescription">Makale Açıklaması</label>
+                <input formControlName="articleDescription" type="text" class="form-control" id="articleDescription">
+            </div>
+            <div class="form-group">
+                <label for="contentType">Makale Tipi (Henüz yalnızca text/html destekleniyor.)</label>
+                <input formControlName="contentType" type="text" class="form-control" id="contentType">
+            </div>
+            <div class="form-group">
+                <label for="languageCode">Dil Kodu (tr,en vb)</label>
+                <input formControlName="languageCode" type="text" class="form-control" id="languageCode">
+            </div>
+            <div class="form-group">
+                <label for="subcategoryId">Alt Kategori</label><br/>
+                <select formControlName="subcategoryId" class="form-control" id="subcategoryId" name="subcategoryId">
+                    <option *ngFor="let subcategory of subcategories" [value]="subcategory.subcategoryId">
+                        {{subcategory.subcategoryName | categoryName}}</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="articleContent">Makale İçeriği</label>
+                <textarea formControlName="articleContent" type="text" class="form-control" id="articleContent"></textarea>
+            </div>
+            <button (click)="addArticle()" type="submit" class="btn btn-primary">Ekle</button>
+        </form>
+    </div>
+</div>

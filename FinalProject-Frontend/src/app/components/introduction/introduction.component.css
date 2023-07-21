@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,700;1,300;1,400;1,800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+
+}
+div h1 {
+    font-size: 30px;
+}
+.mainIntro {
+    /*background-color: black;
+    background-image: url(/assets/intro2.jpg);*/
+    background-color: #fefefe;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    height: 100vh;
+    box-sizing: border-box;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 100;
+    color: white;
+   
+    background-blend-mode: darken;
+}
+
+.row {
+    width: 99%;
+    padding: 0 20px;
+    z-index: 101;
+}
+
+.panel {
+    margin: 10px;
+    border: 3px;
+    padding: 3%;
+    word-break: break-word;
+    border-radius: 20px;
+    width: 100%;
+    background: linear-gradient(-45deg, #eeecfb 0%, #577f99 100%);
+}
+
+.imgWrapper {
+    display: inline-block;
+    max-width: 39%;
+}
+
+.intro {
+    max-width: 60%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.pcimg {
+    width: 100%;
+
+}
+.mobileImg {
+    width: 100%;
+}
+
+
+.misyon {
+    margin: 5px;
+    border: 3px;
+    padding: 3%;
+    float: left;
+    border-radius: 20px;
+    width: 31%;
+
+    background: transparent;
+    min-height: 500px;
+    text-align: center;
+    top: 10px;
+}
+
+.vizyon {
+    margin: 5px;
+    border: 3px;
+    padding: 3%;
+    float: left;
+    border-radius: 20px;
+    width: 31%;
+
+    background: transparent;
+    text-align: center;
+}
+
+.joinUs {
+    margin: 5px;
+    border: 3px;
+    padding: 3%;
+    float: left;
+    border-radius: 20px;
+    width: 31%;
+
+    background: transparent;
+    text-align: center;
+}
+
+.content {
+
+    max-width: auto;
+    width: 100%;
+    margin: auto;
+    z-index: 101;
+    margin-bottom: 20px;
+
+}
+
+.content h1 {
+    font-size: 45px;
+
+    color: #fefefe;
+    font-weight: bold;
+    word-break: break-word;
+    font-family: 'Poppins', sans-serif;
+}
+
+.content p {
+    font-size: 20px;
+    color: #fefefe;
+    word-break: break-word;
+    text-align: justify;
+    margin: 10px;
+
+
+    font-family: 'Poppins', sans-serif;
+}
+
+.content a {
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    margin-top: -20px;
+    font-size: 19px;
+    display: inline-block;
+    letter-spacing: 2px;
+    padding: 12px 20px;
+    background-color: #fefefe;
+    border-radius: 5px;
+    color: #162938;
+    font-weight: bold;
+}
+
+.content a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform .5s;
+
+}
+
+.content a:hover {
+    background-color: #162938;
+    color: #fefefe;
+}
+
+.navigation {
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 20px;
+    padding-right: 10px;
+    text-align: right;
+    z-index: 102;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-image: url(/assets/intro2.jpg);
+    max-height: 80px;
+
+
+}
+.navigation h1{
+    margin-top: 20px;
+    float: left;
+    font-size: 35px;
+
+    color: #fefefe;
+    font-weight: 400;
+    word-break: break-word;
+    font-family: "Brush Script MT", cursive;
+}
+.logo{
+   width: 10%;
+    border-radius: 10%;
+    float: left;
+    margin-left: 32px;
+  
+}
+
+ul {
+    list-style: none;
+    display: inline-block;
+}
+
+li {
+
+    float: left;
+    padding: 5px;
+    margin-top: 5px;
+
+
+}
+
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 10px;
+    margin-top: 20px;
+
+
+
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform .5s;
+
+}
+
+
+.navigation .btnLogin-popup {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 10px;
+    padding: 10px;
+    top: 20px;
+    right: 25px;
+}
+
+.navigation .btnLogin-popup:hover {
+    background: #fff;
+    color: #162938;
+}
+
+.populerArticles{
+    margin: 5px;
+    border: 3px;
+    padding: 3%;
+    float: left;
+    text-decoration: solid ;
+    border-color: #0c1421;
+    color: #0c1421;
+    width: 100%;
+
+    background: transparent;
+
+}
+hr{
+    color: #0c1421;
+    width: 100%;
+    border-width: 3px;
+}
+
+
+.populerArticles h1{
+    color: #0c1421;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+@media screen and (min-width: 900px) {
+    .mobileImg {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .content a {
+
+        margin-top: -20px;
+        font-size: 20px;
+        font-weight: bold;
+
+    }
+
+    .intro {
+
+        max-width: 100%;
+    }
+
+    .pcimg {
+        display: none;
+    }
+
+    .mobileImg {
+        display: block;
+    }
+
+
+    .vizyon {
+
+        float: none;
+        flex-direction: column;
+        width: 80%;
+
+        text-align: center;
+        align-content: center;
+        margin: auto;
+
+    }
+
+    .misyon {
+        float: none;
+        flex-direction: column;
+        width: 80%;
+
+        text-align: center;
+        align-content: center;
+        margin: auto;
+
+    }
+
+    .joinUs {
+
+        float: none;
+        flex-direction: column;
+        width: 80%;
+        margin: auto;
+        align-content: center;
+        text-align: center;
+
+    }
+    .logo{
+        width: 20%;
+         border-radius: 10%;
+         float: left;
+         margin-left: 32px;
+       
+     }
+
+}

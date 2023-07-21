@@ -1,0 +1,49 @@
+<div class="mainContainer">
+  <div class="wrapper">
+    <a>
+      <i class="icon-close bi bi-person-circle"></i>
+    </a>
+    <div class="form-box login">
+
+      <h2>{{"login" | translate}}</h2>
+
+
+      <form [formGroup]="loginForm">
+
+
+        <div class="input-box">
+          <i class="icon bi bi-envelope"></i>
+          <input id="usernameInput" type="text" required formControlName="username">
+          <label>{{"username" | translate}}</label>
+        </div>
+
+
+        <div class="input-box">
+          <i class="icon bi bi-lock"></i>
+          <input type="password" required formControlName="password">
+          <label>{{"password" | translate}}</label>
+        </div>
+
+
+        <div class="remember-forgot">
+          <label><input id="rememberMeCheck" type="checkbox">{{"rememberMe" | translate}}</label>
+          <a routerLink="/forgot-password">{{"forgotPassword" | translate}}</a>
+        </div>
+
+        <button class="btn" (click)="login()"> {{'login' | translate}}
+          <div *ngIf="sending" class="spinner-border spinner-border-sm" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </button>
+        <div class="login-register">
+          <p>{{"areYouNotAMember" | translate}} <a routerLink="/register" class="register-link">{{"register" |
+              translate}}
+            </a></p>
+        </div>
+        <div class="login-quest">
+          <p><a routerLink="/articles" class="quest-link">{{"continueAsGuest" | translate}} </a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

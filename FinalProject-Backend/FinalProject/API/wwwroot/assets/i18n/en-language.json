@@ -1,0 +1,59 @@
+{
+    "tr":"Turkish",
+    "en":"English",
+    "login":"Login",
+    "register":"Register",
+    "continueAsGuest":"Continue as guest",
+    "username":"Username",
+    "firstName":"Firstname",
+    "lastName":"Lastname",
+    "email":"Email",
+    "password":"Password",
+    "sendEmail":"Send mail",
+
+    "oldPassword":"Old Password",
+    "newPassword":"New Password",
+    "newPasswordAgain": "New Password (Again)",
+    "ChangePassword":"Change Password",
+    "PasswordSettings":"Password Settings",
+    "update":"Update",
+    "cancel":"Cancel",
+
+    "doYouHaveAnAccount":"Do you have already a account ?",
+    "formError.required":"{{fieldName}} field must be a fill",
+    "formError.minlength":"{{fieldName}} field minimum length is {{requiredLength}} ",
+    "formError.maxlength":"{{fieldName}} field maximum length is {{requiredLength}} ",
+    "formError.regexPattern.onlyLetters":"You can use only letters for {{fieldName}} field ",
+    "formError.regexPattern.letterNumberUnderScoreAndPoint":"You can use only letters, under score and dot for {{fieldName}} field ",
+    "forgotPassword":"Forgot Password",
+    "rememberMe":"Remember Me",
+    "areYouNotAMember":"Don't have an account ?",
+
+    "articles":"Articles",
+    "categories":"Categories",
+    "searchArticle":"Search a Article",
+    "sequencedImages":"Sequenced Images",
+    "questions":"Questions",
+    "clickCurrentPhotoGoToNextPhoto":"Click current photo for show a next photo",
+    "filter":"Filter",
+    "clearFilter":"Clear Filter",
+    "mainPage":"Main Page",
+    "discussions":"Discussions",
+    "myProfile":"My Profile",
+    "settings":"Settings",
+    "logout":"Logout",
+
+    "contentAndLanguageSettings":"Content And Language Settings",
+    
+    "nextQuestion":"Next Question",
+    "endExam":"End Exam",
+    
+    "accountSettings":"Account Settings",
+    "accountInfo":"Profile Info",
+    "progress":"Progress",
+    "resetCode":"Reset Code",
+    "resetPassword":"Reset Password",
+    "errorToastMessage":"An error occurred"
+    
+
+}

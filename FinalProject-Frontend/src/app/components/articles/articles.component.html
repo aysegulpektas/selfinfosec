@@ -1,0 +1,57 @@
+
+<div class="adminOperationsClass">
+  <div class="isAdminMain" *ngIf="isAdmin">
+    <button routerLink="/add-article" class="btn btn-success">{{'addArticle' | translate}}</button>
+    <button routerLink="/add-category" class="btn btn-success">{{'addCategory' | translate}}</button>
+    <button routerLink="/add-subcategory" class="btn btn-success">{{'addSubcategory' | translate}}</button>
+  </div>
+</div>
+<div class="articlesMain">
+<!--ARTICLES FILTER-->
+<div style="display: flex; justify-content: space-between;">
+  <div class="dropdown">
+    <button id="categories"
+     class="btn btn-secondary dropdown-toggle" type="button"
+      data-bs-toggle="dropdown" aria-expanded="false">
+      
+      {{'categories' | translate}}
+    </button>
+    <button  id="burger" type="button"
+      data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="bi bi-list"></i>
+      
+    </button>
+    <ul class="dropdown-menu">
+      <div>
+        <ul class="list">
+            <li class="listItem" [class.activeItem]="isActiveSubcategories(category.subcategoryId)" (click)="toggleActive(category.subcategoryId)" *ngFor="let category of subcategories">{{category.subcategoryName | categoryName}}</li>
+            <hr/>
+            <li class="listItem" (click)="clearSelectedSubcategories()">{{'clearFilter' | translate}}</li>
+            
+        </ul>
+    </div>
+    </ul>
+  </div>
+
+  <div class="container-fluid">
+    <form class="d-flex" role="search">
+      <input style="width: 150px; height: 40px; " id="searchTitleInput" class="form-control me-2" type="search" placeholder="{{'searchArticle' | translate}}"
+        aria-label="Search">
+      <button id="search-button" class="btn btn-outline-success" (click)="getArticles()" type="submit">{{'filter' | translate}}</button>
+      <button id="icon"  (click)="getArticles()" type="submit"><i class="bi bi-search"></i></button>
+      <div *ngIf="loading || loadingSubcategories" class="spinner-border spinnerExtras" role="status">
+      </div>
+    </form>
+ 
+  </div>
+</div>
+<hr class="filterHrTag"/>
+<div class="articleListMain" *ngIf="loadingSubcategories == false">
+  <div class="articleList">
+    <app-article-list-item *ngFor="let article of articles" [article]="article" [categories]="subcategories"></app-article-list-item>
+  </div>
+</div>
+
+<!--FILTER END-->
+
+</div>

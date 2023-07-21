@@ -1,0 +1,44 @@
+<div class="adminOperations" *ngIf="isAdmin">
+    <b style="color:var(--default-text-color); margin-right: 10px;">{{'adminOperations' | translate}}</b>
+    <button style="margin-right: 5px; margin-left:5px;" (click)="deleteArticle()" class="btn btn-danger btn-sm">{{'deleteArticle' | translate}}</button>
+    <button style="margin-right: 5px; margin-left:5px;" routerLink="/add-question" class="btn btn-secondary btn-sm">{{'addQuestion'|translate}}</button>
+    <button style="margin-right: 5px; margin-left:5px;" routerLink="/add-sequenced-image" class="btn btn-info btn-sm">{{'addSequencedImage' | translate}}</button>
+</div>
+<div class="iframe-wrapper">
+    <iframe class="article-view-frame"
+        sandbox="allow-presentation allow-same-origin allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-scripts"
+        id="article-viewer">
+
+    </iframe>
+</div>
+<div *ngIf="sequencedImages && sequencedImages.data.length > 0" class="sequenced-image-wrapper">
+    <div class="sequenced-image-title">
+        <h4>{{'sequencedImages' | translate}} </h4>
+        <font style="font-size:13px">{{'clickCurrentPhotoGoToNextPhoto' | translate }}</font>
+    </div>
+    <br /><br />
+    <div (click)="nextImg()" [id]="'sequencedimg_'+sequencedImage.sequence"
+        [class.hideImg]="sequencedImage.sequence != currentSequence" class="sequenced-image-description-container"
+        *ngFor="let sequencedImage of sequencedImages.data">
+        <img [src]="sequencedImage.imagePath" />
+        <div class="sequenced-image-description">
+            <font>
+                {{sequencedImage.description}}
+            </font>
+        </div>
+    </div>
+</div>
+<div class="question-groups-wrapper">
+    <h5 style="color: var(--default-text-color);">{{'questions' | translate}}</h5>
+    <hr>
+    <div>
+        <p *ngIf="isLogged == false" class="requireLoggedForShowQuizzes">{{"pleaseLoginForShowQuizzes" | translate}} </p>
+    </div>
+    <div *ngIf="isLogged">
+        <div [routerLink]="'/quiz/'+questionGroup.questionGroupId" *ngFor="let questionGroup of questionGroups"
+            class="questionGroupItem">
+            <i class="bi bi-pencil-square"></i>
+            <font> {{questionGroup.groupTitle}}</font>
+        </div>
+    </div>
+</div>

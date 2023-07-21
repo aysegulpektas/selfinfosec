@@ -1,0 +1,165 @@
+
+.wrapper{
+     
+    max-width: 800px;
+    width: 100%;
+    margin-left: 18%;
+  
+    padding-top: 50px;
+    padding: 20px;
+    position: relative;
+    background: transparent;
+    background: #fefefe;
+    backdrop-filter: blur(20px);
+   
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+
+}
+.wrapper .form-box{
+    width: 100%;
+    padding: 20px;
+    padding-top: 0px;
+}
+h3{
+    font-size: 2em;
+   
+    color: #162938;
+   padding-top: -10px;
+    padding-left: 20px;
+}
+
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #162938;
+    margin: 30px 0;
+
+} 
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color:#0c1421;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+.input-box input:focus~label,
+.input-box input:valid~label
+{
+    top:-5px;
+}
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color:#000000;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+
+}
+
+
+.img-circle img {
+	height: 100px;
+	width: 100px;
+	border-radius: 100%;
+	border: 5px solid #fff;
+}
+
+
+ a{
+    text-decoration: none;
+    margin-top: 20px;
+    font-size: 19px;
+    display: inline-block;
+  
+    padding: 12px 20px;
+    background-color:  #fefefe;
+    border-radius: 5px;
+    color: #162938;
+}
+ a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform .5s;
+    
+}
+ a:hover{
+     background-color: #162938;
+    color: #fefefe;
+}
+ a:hover::after{
+    transform: scaleX(0.3);
+   
+
+}
+
+
+ 
+
+.btn{
+    width: 100px;
+    height: 45px;
+    background-color: #162938;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    color: #fefefe;
+    float: left;
+    border: #162938 solid 2px;
+    margin-right: 5px;
+}
+.btn:hover {
+    background: #fefefe;
+    color: #162938;
+  }
+
+  
+@media screen and (max-width: 800px) {
+
+   
+    .wrapper{
+     
+         display: block;      
+        padding: 10px;
+       height:auto;
+        width: 100%;
+        margin-left: 0%;
+      margin-top: -95px;      
+        display: flex;
+        flex-direction: column;
+       
+    
+    }
+    .btn{
+        width: 80px;
+        height: 40px;
+        
+        font-size: 0.8em;
+        font-weight: 500;
+        justify-content: center;
+        margin-right: 10%;
+    }
+        
+}

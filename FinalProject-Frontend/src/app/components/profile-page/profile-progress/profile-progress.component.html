@@ -1,0 +1,36 @@
+<section class="py-5 my-5">
+	<div class="container">
+		<div class="wrapper">
+			<app-profile-navi></app-profile-navi>
+			<div class="tab-content p-4 p-md-5" id="v-pills-tabContent">
+				<div>
+					<h3>{{'progress' | translate}}</h3>
+					  <div *ngIf="loading == true" class="alert alert-primary d-flex align-items-center" role="alert">
+						<span class="spinner-border" role="status" aria-hidden="true"></span>
+						<div>
+						   &nbsp;&nbsp; {{ "loadingProgress" | translate}}
+						</div>
+					  </div>
+                    <div style="width: 100%; height:10px;"></div>
+                    <div *ngIf="userProfileInfo && userProfileInfo.completedArticles.length > 0">
+                        <div class="progressItemDiv" *ngFor="let completed of userProfileInfo.completedArticles">
+                            <div class="articleName"><b><i class="bi bi-info-circle-fill"></i> Makale Adı : </b>{{completed.articleName}}</div>
+                            <div class="quizName"><b><i class="bi bi-pencil-square"></i> Bölüm : </b>{{completed.questionGroupText}}</div>
+                            <div class="successRate"><b><i class="bi bi-activity"></i> Başarı Oranı : </b>%{{completed.successRate*100}}
+								<div class="progress">
+									<div class="progress-bar progress-bar-striped" [class.bg-danger]="completed.successRate < 0.35" [class.bg-success]="completed.successRate > 0.7" role="progressbar" [style.width]="(completed.successRate*100)+'%'" attr.aria-valuenow="{{completed.successRate*100}}" aria-valuemin="0" aria-valuemax="100">%{{completed.successRate*100}}</div>
+								  </div>
+							
+							</div>
+                        </div>
+                    </div>
+
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+

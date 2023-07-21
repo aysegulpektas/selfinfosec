@@ -1,0 +1,17 @@
+<div class="addCategoryMain">
+    <h3>Kategori ekle</h3>
+    <form [formGroup]="addCategoryForm">
+        <label for="articleId" class="form-label">Kategori Adı</label>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" id="categoryName" formControlName="categoryName">
+        </div>
+        <label for="sequence" class="form-label">Kategori Açıklaması</label>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" id="categoryDescription" formControlName="categoryDescription">
+        </div>
+
+    </form>
+    <div style="text-align: right;">
+        <button class="btn btn-sm btn-info" (click)="addCategory()" style="color:white;">Kategori Ekle</button>
+    </div>
+</div>

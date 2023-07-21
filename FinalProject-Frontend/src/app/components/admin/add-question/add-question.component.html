@@ -1,0 +1,69 @@
+<div class="addQuestionMain">
+    <h3>Bölüm Ekle</h3>
+    <form id="questionGroupForm" class="addSection">
+        <label for="groupTitle" class="form-label">Bölüm Adı</label>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" id="groupTitle">
+        </div>
+
+        <div>
+            <label class="form-label">Makale Seçin</label>
+            <app-articles-helper (selectedArticleId)="getArticleId($event)"></app-articles-helper>
+            </div><br/>
+
+        <div class="form-check">
+            <input class="form-check-input" id="useForScore" type="checkbox" value="">
+            <label class="form-check-label" for="useForScore">
+                Puanlamada Kullanılsın
+            </label>
+        </div>
+
+    </form>
+    <div class="addQuestion">
+        <form id="questionGroupForm" class="addSection">
+            <label for="groupTitle" class="form-label">Soru</label>
+            <div class="input-group mb-3">
+                <textarea class="form-control" id="questionText"></textarea>
+            </div>
+        </form>
+    </div>
+    <div class="addAnswer">
+        <div class="answerItem">
+            <p>Seçenek 1</p>
+            <input type="text" id="answerText1" class="form-control"/>
+            <input class="form-check-input" type="checkbox" value="" id="answerText1_True">
+            <label class="form-check-label" for="answerText1_True">
+                Doğru Cevap
+            </label><div style="display: inline-block;" *ngIf="answer1Added"><i class="bi bi-check-circle-fill" style="font-size:18px; color:rgb(0, 175, 0);"></i> Yanıt eklendi</div>
+        </div>
+        <div class="answerItem">
+            <p>Seçenek 2</p>
+            <input type="text" id="answerText2" class="form-control"/>
+            <input class="form-check-input" type="checkbox" value="" id="answerText2_True">
+            <label class="form-check-label" for="answerText2_True">
+                Doğru Cevap
+            </label><div style="display: inline-block;" *ngIf="answer2Added"><i class="bi bi-check-circle-fill" style="font-size:18px; color:rgb(0, 175, 0);"></i> Yanıt eklendi</div>
+        </div>
+        <div class="answerItem">
+            <p>Seçenek 3</p>
+            <input type="text" id="answerText3" class="form-control"/>
+            <input class="form-check-input" type="checkbox" value="" id="answerText3_True">
+            <label class="form-check-label" for="answerText3_True">
+                Doğru Cevap
+            </label><div style="display: inline-block;" *ngIf="answer3Added"><i  class="bi bi-check-circle-fill" style="font-size:18px; color:rgb(0, 175, 0);"></i> Yanıt eklendi</div>
+        </div>
+        <div class="answerItem">
+            <p>Seçenek 4</p>
+            <input type="text" id="answerText4" class="form-control"/>
+            <input class="form-check-input" type="checkbox" value="" id="answerText4_True">
+            <label class="form-check-label" for="answerText4_True">
+                Doğru Cevap
+            </label><div style="display: inline-block;" *ngIf="answer4Added"><i class="bi bi-check-circle-fill" style="font-size:18px; color:rgb(0, 175, 0);"></i> Yanıt eklendi</div>
+        </div>
+
+    </div>
+    <div style="text-align: right;">
+    <button class="btn btn-danger btn-sm" *ngIf="loading == false && newQuestion == true" [disabled]="loading" (click)="addNewQuestion()">Yeni Soru</button>
+    <button class="btn btn-danger btn-sm" [disabled]="loading" (click)="add()"><span *ngIf="loading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Ekle</button>
+    </div>
+</div>

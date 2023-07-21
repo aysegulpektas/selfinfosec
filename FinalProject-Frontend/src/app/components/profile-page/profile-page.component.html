@@ -1,0 +1,51 @@
+<section class="py-5 my-5">
+	<div class="container">
+		<div class="wrapper">
+			<app-profile-navi></app-profile-navi>
+			<div class="tab-content p-4 p-md-5" id="v-pills-tabContent">
+				<div>
+					<h3>{{'accountInfo' | translate}}</h3>
+					<!--<div class="form-box">
+						<form>
+							<div class="input-box">
+								<input type="text" style="cursor: not-allowed;" disabled *ngIf="userInfoModel"
+									value="{{userInfoModel.userName}}">
+								<label style="top:-5px;">{{'username' | translate}}</label>
+							</div>
+
+							<div class="input-box">
+								<input type="text" id="firstName" *ngIf="userInfoModel"
+									value="{{userInfoModel.firstName}}">
+								<label>{{'firstName' | translate}}</label>
+							</div>
+
+							<div class="input-box">
+								<input type="text" id="lastName" *ngIf="userInfoModel"
+									value="{{userInfoModel.lastname}}">
+								<label>{{'lastName' | translate}}</label>
+							</div>
+
+							<div class="input-box">
+								<input type="email" id="email" *ngIf="userInfoModel" value="{{userInfoModel.email}}">
+								<label>{{'email' | translate}}</label>
+
+							</div>
+
+							<button class="btn" (click)="updateProfile()">{{'update' | translate}}</button>
+							<button class="btn" (click)="cancel()">{{'cancel' | translate}}</button>
+
+						</form>
+					</div>-->
+					<br/>
+					<div *ngIf="userInfoModel != null" class="profileInfo">
+						<div class="profileInfoItem"><font class="title">{{'username' | translate}} : </font><font class="value">{{userInfoModel.userName}}</font></div>
+						<div class="profileInfoItem"><font class="title">{{'firstName' | translate}} : </font><font class="value">{{userInfoModel.firstName}}</font></div>
+						<div class="profileInfoItem"><font class="title">{{'lastName' | translate}} : </font><font class="value">{{userInfoModel.lastname}}</font></div>
+						<div class="profileInfoItem"><font class="title">{{'email' | translate}} : </font><font class="value">{{userInfoModel.email}}</font></div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,251 @@
+nav {
+    position: fixed;
+    top: 2%;
+    left: 2%;
+    width: 96%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 99;
+    text-align: left;
+    margin:auto;
+    border-radius: 30px;
+    background-color: var(--navbar-background-color);
+    color: var(--default-text-color);
+  }
+  .naviWrapper {
+    position: fixed;
+
+    background: var(--body-background);
+    width: 100%;
+    top:0px;
+    left: 0px;
+    background-attachment: fixed;
+    z-index: 99;
+    height: 120px;
+    color: var(--default-text-color);
+  }
+  .naviWrapper2 {
+    background-color: transparent;
+
+    width: 100%;
+    top:0px;
+    left: 0px;
+    z-index: 99;
+    background-attachment: fixed;
+    height: 120px;
+  }
+  .nav-item {
+    display: flex;
+    align-items: center;
+  }
+  .btnNavMenu {
+    display: flex;
+    align-items: center;
+  }
+  #btnLogin-popup {
+
+    width: 100px;
+    /*height: 40px;*/
+    height: fit-content;
+    background: #3b4e5b;
+    border: 2px solid #3b4e5b;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9em;
+    color: #fefefe;
+    font-weight: 500;
+    margin-left: 20px;
+    transition: .5s;
+    margin-top: 15px;
+    padding: 5px;
+
+
+  }
+  .language-select-btn {
+    font-size:30px;
+    color:#36affd;
+  }
+
+  #btnLogin-popup:hover {
+    background: var(--navbar-background-color);
+    color: var(--default-text-color);
+  }
+
+  ul {
+    list-style: none;
+
+  }
+
+  li {
+    float: auto;
+    padding: 10px;
+
+  }
+
+  a {
+    position: relative;
+    font-size: 0.9em;
+    color: #162938;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 20px;
+  }
+
+  a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 1px;
+    background: var(--default-text-color);
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform .5s;
+
+  }
+  .naviBtn {
+    color: var(--default-text-color);
+  }
+
+  .naviBtn:hover::after {
+    transform: scaleX(1);
+  }
+
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    overflow: hidden;
+    z-index: 1;
+    width: 100px;
+    margin-left: -50px;
+
+
+  }
+
+  .dropdown-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: -10px 16px;
+    margin-left: -10px;
+    background: transparent;
+  }
+
+  .icon {
+    position: absolute;
+    right: -10px;
+    font-size: 1.2em;
+    line-height: 57px;
+    float: right;
+
+  }
+  .logoNavbar {
+    font-size: 1em;
+    font-family: sans-serif;
+    font-weight: bold;
+    border:3px solid #0c1421;
+    border-radius: 30px;
+    padding: 3px 30px;
+    margin-left: 10px;
+  }
+  .userMenu:hover{
+    color: rgb(80, 80, 80);
+  }
+  .userMenu:hover > .icon {
+    color: blue;
+  }
+  /*switch dark light mode */
+  .theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  em {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+  .theme-switch {
+    display: inline-block;
+    height: 30px;
+    position: relative;
+    width: 50px;
+  }
+  
+  .theme-switch input {
+    display:none;
+  }
+
+  
+  .slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 22px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 22px;
+  }
+  
+  input:checked + .slider {
+    background-color: #66bb6a;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(19px);
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
+  .logo{
+    width: 10%;
+     border-radius: 10%;
+     float: left;
+     margin-left: 32px;
+   
+ }
+ .logonav{
+  margin-top: 20px;
+  float: left;
+  font-size: 35px;
+
+  color:#0c1421;
+  font-weight: 400;
+  word-break: break-word;
+  font-family: "Brush Script MT", cursive;
+}
+
+  
+@media screen and (max-width: 900px)
+  {
+    nav {
+    
+    width: 95%;
+    margin: auto;
+
+   } 
+
+  }
